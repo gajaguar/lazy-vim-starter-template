@@ -1,8 +1,12 @@
+backend
 django
 drf
-postgresql
-redis
-backend
-serializers
-hardcode
 gajaguar
+hardcode
+mcp
+postgresql
+pyenv
+redis
+serializers
+ubidots
+zsh
