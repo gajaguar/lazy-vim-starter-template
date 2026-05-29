@@ -4,4 +4,4 @@
 
 -- vim.g.clipboard = "unnamedplus"
 -- vim.g.lazyvim_python_lsp = "pylsp"
-vim.g.python3_host_prog = "$HOME/venvs/nvim/bin/python"
+vim.g.python3_host_prog = vim.fn.expand("$HOME/venvs/nvim/bin/python")
