@@ -1,5 +1,16 @@
 return {
   {
+    "linux-cultist/venv-selector.nvim",
+    opts = {
+      settings = {
+        options = {
+          notify_user_on_venv_activation = true,
+        },
+      },
+    },
+    ft = "python",
+  },
+  {
     "mfussenegger/nvim-lint",
     opts = {
       linters_by_ft = {
@@ -15,6 +26,13 @@ return {
             end
             return "mypy"
           end)(),
+          args = function()
+            local venv = require("venv-selector").venv()
+            if venv then
+              return { "--python-executable", venv }
+            end
+            return {}
+          end,
         },
       },
     },
